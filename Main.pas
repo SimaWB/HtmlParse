@@ -13,8 +13,6 @@ type
     ListView1: TListView;
     ImageList1: TImageList;
     procedure btnLoginClick(Sender: TObject);
-    procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
-      Selected: Boolean);
     procedure ListView1Deletion(Sender: TObject; Item: TListItem);
     procedure ListView1DblClick(Sender: TObject);
   private
@@ -153,12 +151,6 @@ end;
 procedure TFrmMain.ListView1Deletion(Sender: TObject; Item: TListItem);
 begin
   ReleaseString(Item.Data);
-end;
-
-procedure TFrmMain.ListView1SelectItem(Sender: TObject; Item: TListItem;
-  Selected: Boolean);
-begin
-  Caption := String(Item.Data);
 end;
 
 end.
